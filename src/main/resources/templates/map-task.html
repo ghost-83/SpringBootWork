@@ -3,22 +3,80 @@
    <head>
       <link rel="stylesheet" href="/css/bootstrap.min.css">
       <link rel="stylesheet" href="/leaflet/leaflet.css">
+       <link rel="stylesheet" href="/css/daterangepicker.css">
       <link rel="stylesheet" href="/css/style.css">
 
        <title>Test</title>
        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    </head>
 
+   <!-- Создаем блок для отображения карт -->
    <body class="container-fluid">
       <div class="row">
-        <div id="map"></div>
+          <div id="map">
+          </div>
+      </div>
+
+      <div id="taskModalBox" class="modal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <!-- Заголовок -->
+                  <div class="modal-header bg-primary text-white">
+                      <h4 class="modal-title">Создать задачу</h4>
+                  </div>
+                  <!-- Форма для создания задачи -->
+                  <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                              <label for="exampleFormControlInput1">Нозвание задачи:</label>
+                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Введите название задачи">
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Описание задачи:</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Кем поставлена задача:</label>
+                              <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>Путин В.В.</option>
+                                  <option>Медведев Д.А.</option>
+                                  <option>Шойге С.К.</option>
+                                  <option>Лавров С.В.</option>
+                                  <option>Матвеенка В.И.</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleFormControlSelect1">Категория задачи:</label>
+                              <select class="form-control" id="exampleFormControlSelect2">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label>Дата выполнения задачи:</label>
+                              <input type="date" class="form-control" id="data" name="date" placeholder="Дата" required>
+                          </div>
+                      </form>
+                  </div>
+                  <!-- Футер модального окна -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                      <button id="save" type="button" class="btn btn-primary">Сохранить изменения</button>
+                  </div>
+              </div>
+          </div>
       </div>
 
 
-    <script src="/js/jquery-3.5.1.min.js" ></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/leaflet/leaflet.js"></script>
-    <script src="/js/script.js"></script>
+        <script src="/js/jquery-3.5.1.min.js" ></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/leaflet/leaflet.js"></script>
+        <script src="/js/moment.js"></script>
+        <script src="/js/daterangepicker.js"></script>
+        <script src="/js/script.js"></script>
    </body>
 </html>
