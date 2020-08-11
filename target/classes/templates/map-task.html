@@ -28,16 +28,16 @@
                   <div class="modal-body">
                       <form>
                           <div class="form-group">
-                              <label for="exampleFormControlInput1">Нозвание задачи:</label>
-                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Введите название задачи">
+                              <label>Нозвание задачи:</label>
+                              <input type="email" class="form-control" id="titleTask" placeholder="Введите название задачи">
                           </div>
                           <div class="form-group">
-                              <label for="exampleFormControlTextarea1">Описание задачи:</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                              <label>Описание задачи:</label>
+                              <textarea class="form-control" id="textTask" rows="5"></textarea>
                           </div>
                           <div class="form-group">
-                              <label for="exampleFormControlSelect1">Кем поставлена задача:</label>
-                              <select class="form-control" id="exampleFormControlSelect1">
+                              <label>Кем поставлена задача:</label>
+                              <select class="form-control" id="userTask">
                                   <option>Путин В.В.</option>
                                   <option>Медведев Д.А.</option>
                                   <option>Шойге С.К.</option>
@@ -46,8 +46,8 @@
                               </select>
                           </div>
                           <div class="form-group">
-                              <label for="exampleFormControlSelect1">Категория задачи:</label>
-                              <select class="form-control" id="exampleFormControlSelect2">
+                              <label>Категория задачи:</label>
+                              <select class="form-control" id="statusTask">
                                   <option>1</option>
                                   <option>2</option>
                                   <option>3</option>
@@ -56,15 +56,15 @@
                               </select>
                           </div>
                           <div class="form-group">
-                              <label for="exampleFormControlInput2">Дата выполнения задачи:</label>
-                              <input type="date" class="form-control" id="exampleFormControlInput2" name="date" placeholder="Дата" required>
+                              <label>Дата выполнения задачи:</label>
+                              <input type="date" class="form-control" id="dataTask" name="date" placeholder="Дата" required>
                           </div>
                       </form>
                   </div>
                   <!-- Футер модального окна -->
                   <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                      <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                      <button id="save" type="button" class="btn btn-primary">Сохранить изменения</button>
                   </div>
               </div>
           </div>
@@ -75,7 +75,7 @@
         <script src="/js/popper.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/leaflet/leaflet.js"></script>
-        <script src="/js/moment.js"></script>
+        <script src="/js/moment.min.js"></script>
         <script src="/js/daterangepicker.js"></script>
         <script src="/js/script.js"></script>
    </body>

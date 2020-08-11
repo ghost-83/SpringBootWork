@@ -12,31 +12,32 @@ public class MapTask {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_task;
 
-    private String task, text, data;
-    private Double coordX, coordY;
-    private Boolean status;
+    private String title, text, data;
+    private String coordX;
+    private String coordY;
+    private String status;
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public Double getCoordX() {
+    public String getCoordX() {
         return coordX;
     }
 
-    public void setCoordX(Double coordX) {
+    public void setCoordX(String coordX) {
         this.coordX = coordX;
     }
 
-    public Double getCoordY() {
+    public String getCoordY() {
         return coordY;
     }
 
-    public void setCoordY(Double coordY) {
+    public void setCoordY(String coordY) {
         this.coordY = coordY;
     }
 
@@ -48,12 +49,12 @@ public class MapTask {
         this.id_task = id_task;
     }
 
-    public String getTask() {
-        return task;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getText() {
